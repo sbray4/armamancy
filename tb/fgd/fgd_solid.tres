@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="FuncGodotFGDFile" load_steps=5 format=3 uid="uid://cjfwtlj0ilwk1"]
+
+[ext_resource type="Script" uid="uid://dhcos3p53r8tn" path="res://addons/func_godot/src/fgd/func_godot_fgd_file.gd" id="1_66gf1"]
+[ext_resource type="Resource" uid="uid://c4x6biqcg25hd" path="res://tb/fgd/solid/funcs/func_move.tres" id="1_ce28c"]
+[ext_resource type="Resource" uid="uid://gi2brkcxvae1" path="res://tb/fgd/solid/funcs/func_button.tres" id="2_x3hip"]
+[ext_resource type="Resource" uid="uid://d1dd3ogx8qm5r" path="res://tb/fgd/solid/triggers/trigger_area.tres" id="3_l55ld"]
+
+[resource]
+script = ExtResource("1_66gf1")
+export_file = false
+target_map_editor = 1
+fgd_name = "SolidFGD"
+base_fgd_files = Array[Resource]([])
+entity_definitions = Array[Resource]([ExtResource("1_ce28c"), ExtResource("2_x3hip"), ExtResource("3_l55ld")])
+metadata/_custom_type_script = "uid://dhcos3p53r8tn"

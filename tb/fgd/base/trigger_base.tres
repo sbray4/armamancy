@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="FuncGodotFGDBaseClass" load_steps=5 format=3 uid="uid://dnrty5y013er8"]
+
+[ext_resource type="Script" uid="uid://dyy0p76ajcpgj" path="res://addons/func_godot/src/fgd/func_godot_fgd_base_class.gd" id="1_1ut25"]
+[ext_resource type="Resource" uid="uid://c4i3378qd0gam" path="res://tb/fgd/base/globalname_base.tres" id="1_c6ke1"]
+[ext_resource type="Resource" uid="uid://bculbmhhxwg8d" path="res://tb/fgd/base/target_base.tres" id="2_wk3na"]
+[ext_resource type="Resource" uid="uid://svay3lnsxbgw" path="res://tb/fgd/base/targetname_base.tres" id="3_woqei"]
+
+[resource]
+script = ExtResource("1_1ut25")
+classname = "Trigger"
+description = ""
+func_godot_internal = false
+base_classes = Array[Resource]([ExtResource("1_c6ke1"), ExtResource("2_wk3na"), ExtResource("3_woqei")])
+class_properties = {}
+class_property_descriptions = {}
+auto_apply_to_matching_node_properties = false
+meta_properties = {
+"color": Color(0.8, 0.8, 0.8, 1),
+"size": AABB(-8, -8, -8, 8, 8, 8)
+}
+node_class = ""
+name_property = ""
+metadata/_custom_type_script = "uid://dyy0p76ajcpgj"

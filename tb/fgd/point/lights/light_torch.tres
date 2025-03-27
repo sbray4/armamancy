@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="FuncGodotFGDPointClass" load_steps=4 format=3 uid="uid://b46pglx7siaiu"]
+
+[ext_resource type="Script" uid="uid://w0asuqk7vkcb" path="res://addons/func_godot/src/fgd/func_godot_fgd_point_class.gd" id="1_foygg"]
+[ext_resource type="PackedScene" uid="uid://clq6ip8g0m4rp" path="res://entities/lights/torch/torch.tscn" id="1_jys10"]
+[ext_resource type="Resource" uid="uid://kxib7ky7jqbf" path="res://tb/fgd/point/lights/light_omni.tres" id="1_uh5kw"]
+
+[resource]
+script = ExtResource("1_foygg")
+scene_file = ExtResource("1_jys10")
+apply_rotation_on_map_build = true
+classname = "light_torch"
+description = ""
+func_godot_internal = false
+base_classes = Array[Resource]([ExtResource("1_uh5kw")])
+class_properties = {
+"color": Color(2, 0.9, 0.6, 1)
+}
+class_property_descriptions = {
+"color": "The light's color."
+}
+auto_apply_to_matching_node_properties = false
+meta_properties = {
+"size": AABB(-12, -12, -12, 12, 12, 12)
+}
+node_class = ""
+name_property = ""
+metadata/_custom_type_script = "uid://w0asuqk7vkcb"

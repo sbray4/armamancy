@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="FuncGodotFGDFile" load_steps=7 format=3 uid="uid://2ptkl6n2vga4"]
+
+[ext_resource type="Script" uid="uid://dhcos3p53r8tn" path="res://addons/func_godot/src/fgd/func_godot_fgd_file.gd" id="1_3w1ao"]
+[ext_resource type="Resource" uid="uid://b55rxxofj2x1v" path="res://tb/fgd/point/actors/actor_player.tres" id="1_v65po"]
+[ext_resource type="Resource" uid="uid://dbwa0enrpb7xh" path="res://tb/fgd/point/actors/actor_cultist.tres" id="2_8m2pi"]
+[ext_resource type="Resource" uid="uid://b46pglx7siaiu" path="res://tb/fgd/point/lights/light_torch.tres" id="3_8m2pi"]
+[ext_resource type="Resource" uid="uid://kxib7ky7jqbf" path="res://tb/fgd/point/lights/light_omni.tres" id="4_ha2gr"]
+[ext_resource type="Resource" uid="uid://buco8o2xtu5w8" path="res://tb/fgd/point/lights/light_spot.tres" id="5_odor0"]
+
+[resource]
+script = ExtResource("1_3w1ao")
+export_file = false
+target_map_editor = 1
+fgd_name = "PointFGD"
+base_fgd_files = Array[Resource]([])
+entity_definitions = Array[Resource]([ExtResource("1_v65po"), ExtResource("2_8m2pi"), ExtResource("3_8m2pi"), ExtResource("4_ha2gr"), ExtResource("5_odor0")])
+metadata/_custom_type_script = "uid://dhcos3p53r8tn"

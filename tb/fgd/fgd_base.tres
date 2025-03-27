@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="FuncGodotFGDFile" load_steps=11 format=3 uid="uid://5i8qofjrrwq0"]
+
+[ext_resource type="Script" uid="uid://dhcos3p53r8tn" path="res://addons/func_godot/src/fgd/func_godot_fgd_file.gd" id="1_8v7aa"]
+[ext_resource type="Resource" uid="uid://c4i3378qd0gam" path="res://tb/fgd/base/globalname_base.tres" id="1_qb81b"]
+[ext_resource type="Resource" uid="uid://bculbmhhxwg8d" path="res://tb/fgd/base/target_base.tres" id="2_3qmao"]
+[ext_resource type="Resource" uid="uid://svay3lnsxbgw" path="res://tb/fgd/base/targetname_base.tres" id="3_81u2x"]
+[ext_resource type="Resource" uid="uid://b26as4xjjfksv" path="res://tb/fgd/base/actor_base.tres" id="4_m47wx"]
+[ext_resource type="Resource" uid="uid://dqkyqm6p575yf" path="res://tb/fgd/base/func_base.tres" id="5_do5m7"]
+[ext_resource type="Resource" uid="uid://be1jdg1pswjg2" path="res://tb/fgd/base/light_base.tres" id="6_suy1r"]
+[ext_resource type="Resource" uid="uid://dnrty5y013er8" path="res://tb/fgd/base/trigger_base.tres" id="7_1ba2l"]
+[ext_resource type="Resource" uid="uid://b560spfmdvrq8" path="res://tb/fgd/base/interactable_base.tres" id="8_81u2x"]
+[ext_resource type="Resource" uid="uid://duf4en3iuwxye" path="res://tb/fgd/base/toggleable_base.tres" id="9_m47wx"]
+
+[resource]
+script = ExtResource("1_8v7aa")
+export_file = false
+target_map_editor = 1
+fgd_name = "BaseFGD"
+base_fgd_files = Array[Resource]([])
+entity_definitions = Array[Resource]([ExtResource("1_qb81b"), ExtResource("2_3qmao"), ExtResource("3_81u2x"), ExtResource("4_m47wx"), ExtResource("5_do5m7"), ExtResource("6_suy1r"), ExtResource("7_1ba2l"), ExtResource("8_81u2x"), ExtResource("9_m47wx")])
+metadata/_custom_type_script = "uid://dhcos3p53r8tn"

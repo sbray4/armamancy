@@ -1,0 +1,46 @@
+[gd_scene load_steps=6 format=3 uid="uid://dlyiy1vcjh2x0"]
+
+[ext_resource type="Script" uid="uid://ji2ucs1hrbte" path="res://entities/actors/cultist/cultist.gd" id="1_n6sg4"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_p34h1"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_n6sg4"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_n6sg4"]
+size = Vector3(0.25, 0.25, 0.25)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_n6sg4"]
+size = Vector3(1.25, 2, 1.5)
+
+[node name="Cultist" type="CharacterBody3D" groups=["enemies"]]
+velocity = Vector3(0, 0, -5)
+script = ExtResource("1_n6sg4")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_p34h1")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+mesh = SubResource("CapsuleMesh_n6sg4")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+debug_enabled = true
+
+[node name="VisionRayCast3D" type="RayCast3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6, 0)
+target_position = Vector3(0, 0, -100)
+
+[node name="Dir" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8, -0.5)
+mesh = SubResource("BoxMesh_n6sg4")
+
+[node name="AttackArea" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -0.75)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AttackArea"]
+shape = SubResource("BoxShape3D_n6sg4")
+
+[node name="StairsAheadRayCast3D" type="RayCast3D" parent="."]
+unique_name_in_owner = true
+target_position = Vector3(0, -0.55, 0)

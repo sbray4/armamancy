@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="FuncGodotFGDBaseClass" load_steps=3 format=3 uid="uid://b26as4xjjfksv"]
+
+[ext_resource type="Script" uid="uid://dyy0p76ajcpgj" path="res://addons/func_godot/src/fgd/func_godot_fgd_base_class.gd" id="1_3pfi4"]
+[ext_resource type="Resource" uid="uid://c4i3378qd0gam" path="res://tb/fgd/base/globalname_base.tres" id="1_iqh7l"]
+
+[resource]
+script = ExtResource("1_3pfi4")
+classname = "Actor"
+description = ""
+func_godot_internal = false
+base_classes = Array[Resource]([ExtResource("1_iqh7l")])
+class_properties = {}
+class_property_descriptions = {}
+auto_apply_to_matching_node_properties = false
+meta_properties = {
+"color": Color(0.8, 0, 0, 1),
+"size": AABB(-8, -8, -8, 8, 8, 8)
+}
+node_class = ""
+name_property = ""
+metadata/_custom_type_script = "uid://dyy0p76ajcpgj"

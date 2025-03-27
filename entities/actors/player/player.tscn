@@ -1,0 +1,65 @@
+[gd_scene load_steps=10 format=3 uid="uid://dqh5eb0jco78q"]
+
+[ext_resource type="Script" uid="uid://dg6mf3skdvsmr" path="res://entities/actors/player/player.gd" id="1_wem3k"]
+[ext_resource type="PackedScene" uid="uid://d1f2kh7so2772" path="res://weapon_manager/WeaponManager.tscn" id="2_m6dxv"]
+[ext_resource type="Resource" uid="uid://f2y73i5fyei1" path="res://weapon_manager/revolver/revolver.tres" id="3_hqtel"]
+[ext_resource type="Script" uid="uid://c73o5ahogqxg7" path="res://weapon_manager/weapon_resource.gd" id="4_2hs0m"]
+[ext_resource type="PackedScene" uid="uid://dvf208lbb65hl" path="res://weapon_manager/player_hud/player_hud.tscn" id="4_hqtel"]
+[ext_resource type="Resource" uid="uid://cc61ff6qoaxtl" path="res://weapon_manager/sword/sword.tres" id="5_1jxqw"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_6sit6"]
+height = 1.8
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_u0v2q"]
+height = 1.8
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_2hs0m"]
+radius = 0.25
+
+[node name="Player" type="CharacterBody3D"]
+script = ExtResource("1_wem3k")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+shape = SubResource("CapsuleShape3D_6sit6")
+
+[node name="WorldModel" type="Node3D" parent="."]
+unique_name_in_owner = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="WorldModel"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+mesh = SubResource("CapsuleMesh_u0v2q")
+
+[node name="Head" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.65, 0)
+
+[node name="Camera3D" type="Camera3D" parent="Head"]
+unique_name_in_owner = true
+fov = 90.0
+
+[node name="BulletRayCast3D" type="RayCast3D" parent="Head/Camera3D"]
+target_position = Vector3(0, 0, -100)
+
+[node name="ViewModel" type="Node3D" parent="Head/Camera3D"]
+unique_name_in_owner = true
+
+[node name="InteractShapeCast3D" type="ShapeCast3D" parent="Head/Camera3D"]
+unique_name_in_owner = true
+shape = SubResource("SphereShape3D_2hs0m")
+target_position = Vector3(0, 0, -2)
+max_results = 2
+
+[node name="WeaponManager" parent="." node_paths=PackedStringArray("player", "bullet_raycast", "view_model_container") instance=ExtResource("2_m6dxv")]
+current_weapon = ExtResource("5_1jxqw")
+equipped_weapons = Array[ExtResource("4_2hs0m")]([ExtResource("5_1jxqw"), ExtResource("3_hqtel")])
+player = NodePath("..")
+bullet_raycast = NodePath("../Head/Camera3D/BulletRayCast3D")
+view_model_container = NodePath("../Head/Camera3D/ViewModel")
+
+[node name="StairsAheadRayCast3D" type="RayCast3D" parent="."]
+unique_name_in_owner = true
+target_position = Vector3(0, -0.55, 0)
+
+[node name="PlayerHUD" parent="." node_paths=PackedStringArray("player", "weapon_manager") instance=ExtResource("4_hqtel")]
+player = NodePath("..")
+weapon_manager = NodePath("../WeaponManager")

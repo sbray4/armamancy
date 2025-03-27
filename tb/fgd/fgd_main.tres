@@ -1,12 +1,15 @@
-[gd_resource type="Resource" script_class="FuncGodotFGDFile" load_steps=3 format=3 uid="uid://brwyiv6sg75ku"]
+[gd_resource type="Resource" script_class="FuncGodotFGDFile" load_steps=6 format=3 uid="uid://brwyiv6sg75ku"]
 
 [ext_resource type="Resource" uid="uid://crgpdahjaj" path="res://addons/func_godot/fgd/func_godot_fgd.tres" id="1_xn5yl"]
-[ext_resource type="Script" path="res://addons/func_godot/src/fgd/func_godot_fgd_file.gd" id="2_fd5ek"]
+[ext_resource type="Script" uid="uid://dhcos3p53r8tn" path="res://addons/func_godot/src/fgd/func_godot_fgd_file.gd" id="2_fd5ek"]
+[ext_resource type="Resource" uid="uid://5i8qofjrrwq0" path="res://tb/fgd/fgd_base.tres" id="2_x0b4v"]
+[ext_resource type="Resource" uid="uid://cjfwtlj0ilwk1" path="res://tb/fgd/fgd_solid.tres" id="3_vd1ht"]
+[ext_resource type="Resource" uid="uid://2ptkl6n2vga4" path="res://tb/fgd/fgd_point.tres" id="4_37r3m"]
 
 [resource]
 script = ExtResource("2_fd5ek")
 export_file = false
 target_map_editor = 1
 fgd_name = "ArmamancyFGD"
-base_fgd_files = Array[Resource]([ExtResource("1_xn5yl")])
+base_fgd_files = Array[Resource]([ExtResource("1_xn5yl"), ExtResource("2_x0b4v"), ExtResource("3_vd1ht"), ExtResource("4_37r3m")])
 entity_definitions = Array[Resource]([])

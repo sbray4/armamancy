@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="FuncGodotFGDPointClass" load_steps=4 format=3 uid="uid://b55rxxofj2x1v"]
+
+[ext_resource type="PackedScene" uid="uid://dqh5eb0jco78q" path="res://entities/actors/player/player.tscn" id="1_e5qcu"]
+[ext_resource type="Resource" uid="uid://b26as4xjjfksv" path="res://tb/fgd/base/actor_base.tres" id="1_hj5wo"]
+[ext_resource type="Script" uid="uid://w0asuqk7vkcb" path="res://addons/func_godot/src/fgd/func_godot_fgd_point_class.gd" id="1_sxgpl"]
+
+[resource]
+script = ExtResource("1_sxgpl")
+scene_file = ExtResource("1_e5qcu")
+apply_rotation_on_map_build = true
+classname = "actor_player"
+description = ""
+func_godot_internal = false
+base_classes = Array[Resource]([ExtResource("1_hj5wo")])
+class_properties = {}
+class_property_descriptions = {}
+auto_apply_to_matching_node_properties = false
+meta_properties = {
+"color": Color(0.8, 0.8, 0.8, 1),
+"size": AABB(-8, -8, 0, 8, 8, 16)
+}
+node_class = ""
+name_property = ""
+metadata/_custom_type_script = "uid://w0asuqk7vkcb"

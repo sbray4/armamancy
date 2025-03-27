@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="FuncGodotFGDPointClass" load_steps=4 format=3 uid="uid://kxib7ky7jqbf"]
+
+[ext_resource type="Resource" uid="uid://be1jdg1pswjg2" path="res://tb/fgd/base/light_base.tres" id="1_kynqf"]
+[ext_resource type="Script" uid="uid://w0asuqk7vkcb" path="res://addons/func_godot/src/fgd/func_godot_fgd_point_class.gd" id="1_ywf7m"]
+[ext_resource type="Script" uid="uid://dl8j634c06npo" path="res://entities/lights/light_omni.gd" id="3_wougq"]
+
+[resource]
+script = ExtResource("1_ywf7m")
+script_class = ExtResource("3_wougq")
+apply_rotation_on_map_build = true
+classname = "light_omni"
+description = "OmniLight3D entity."
+func_godot_internal = false
+base_classes = Array[Resource]([ExtResource("1_kynqf")])
+class_properties = {
+"range": 320.0
+}
+class_property_descriptions = {
+"range": "The light's radius in Quake Units. The entity script converts this to Godot Units in the LightOmni script."
+}
+auto_apply_to_matching_node_properties = false
+meta_properties = {}
+node_class = "OmniLight3D"
+name_property = ""
+metadata/_custom_type_script = "uid://w0asuqk7vkcb"

@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://ilkq4hficsi6"]
+
+[ext_resource type="ArrayMesh" uid="uid://3so2ggovogoq" path="res://entities/fire/fireball.obj" id="1_b3uwl"]
+[ext_resource type="Shader" uid="uid://btway72yofk8b" path="res://entities/fire/fire_shader.tres" id="1_cl0tn"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_k0i2u"]
+render_priority = 0
+shader = ExtResource("1_cl0tn")
+shader_parameter/Fire_Color = Color(2, 0.9, 0.6, 1)
+shader_parameter/Speed = Vector2(0.2, 1.2)
+
+[node name="Fire" type="Node3D"]
+
+[node name="Fireball" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.11, 0, 0, 0, 0.11, 0, 0, 0, 0.11, 0, 0, 0)
+material_override = SubResource("ShaderMaterial_k0i2u")
+cast_shadow = 0
+mesh = ExtResource("1_b3uwl")

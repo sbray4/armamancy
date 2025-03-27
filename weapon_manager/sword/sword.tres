@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="MeleeWeaponResource" load_steps=5 format=3 uid="uid://cc61ff6qoaxtl"]
+
+[ext_resource type="AudioStream" uid="uid://b7wimq64k2ghd" path="res://weapon_manager/sword/cc0-swoosh.wav" id="1_ro0tv"]
+[ext_resource type="PackedScene" uid="uid://owoaenytgtwx" path="res://weapon_manager/sword/knife viewmodel.glb" id="2_fcoy5"]
+[ext_resource type="Script" uid="uid://b8bc4e2j0oao1" path="res://weapon_manager/melee_weapon_resource.gd" id="2_ro0tv"]
+[ext_resource type="AudioStream" uid="uid://blnwlorabv05p" path="res://weapon_manager/sword/cc0-118792__lmbubec__1_knife_slash_a.wav" id="3_vvqtc"]
+
+[resource]
+script = ExtResource("2_ro0tv")
+max_hit_dist = 3
+miss_sound = ExtResource("1_ro0tv")
+name = ""
+slot = 1
+view_model = ExtResource("2_fcoy5")
+view_model_pos = Vector3(0, -0.33, 0.34)
+view_model_rot = Vector3(0, 3.142, 0)
+view_model_scale = Vector3(1, 1, 1)
+view_idle_anim = "Idle"
+view_equip_anim = "Unholster"
+view_shoot_anim = "Shoot"
+shoot_sound = ExtResource("3_vvqtc")
+damage = 35
+current_ammo = 999
+max_ammo = 999
+auto_fire = true
+max_fire_rate_ms = 500.0
+metadata/_custom_type_script = "uid://b8bc4e2j0oao1"

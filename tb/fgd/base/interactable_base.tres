@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="FuncGodotFGDBaseClass" load_steps=2 format=3 uid="uid://b560spfmdvrq8"]
+
+[ext_resource type="Script" uid="uid://dyy0p76ajcpgj" path="res://addons/func_godot/src/fgd/func_godot_fgd_base_class.gd" id="1_tixby"]
+
+[resource]
+script = ExtResource("1_tixby")
+classname = "Interactable"
+description = ""
+func_godot_internal = false
+base_classes = Array[Resource]([])
+class_properties = {
+"interactable": false
+}
+class_property_descriptions = {}
+auto_apply_to_matching_node_properties = false
+meta_properties = {
+"color": Color(0.8, 0.8, 0.8, 1),
+"size": AABB(-8, -8, -8, 8, 8, 8)
+}
+node_class = ""
+name_property = ""
+metadata/_custom_type_script = "uid://dyy0p76ajcpgj"

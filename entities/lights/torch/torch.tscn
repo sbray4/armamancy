@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://clq6ip8g0m4rp"]
+
+[ext_resource type="PackedScene" uid="uid://dg00db2namdhc" path="res://entities/lights/torch/wall_torch.glb" id="1_lk4ha"]
+[ext_resource type="Script" uid="uid://bhpwhsnkpdke" path="res://entities/lights/torch/torch.gd" id="1_y6k3r"]
+[ext_resource type="PackedScene" uid="uid://ilkq4hficsi6" path="res://entities/fire/fire.tscn" id="2_cyg16"]
+
+[node name="Torch" type="Node3D"]
+script = ExtResource("1_y6k3r")
+
+[node name="Fire" parent="." instance=ExtResource("2_cyg16")]
+transform = Transform3D(1, 0, 0, 0, 0.906308, -0.422618, 0, 0.422618, 0.906308, 0, 0.5, 0.04)
+
+[node name="wall_torch" parent="." instance=ExtResource("1_lk4ha")]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0, 0, 0)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0.1)
+light_color = Color(2, 0.9, 0.6, 1)

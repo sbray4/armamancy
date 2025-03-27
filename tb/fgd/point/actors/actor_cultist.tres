@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="FuncGodotFGDPointClass" load_steps=4 format=3 uid="uid://dbwa0enrpb7xh"]
+
+[ext_resource type="Script" uid="uid://w0asuqk7vkcb" path="res://addons/func_godot/src/fgd/func_godot_fgd_point_class.gd" id="1_0p6tn"]
+[ext_resource type="Resource" uid="uid://b26as4xjjfksv" path="res://tb/fgd/base/actor_base.tres" id="1_nmps1"]
+[ext_resource type="PackedScene" uid="uid://dlyiy1vcjh2x0" path="res://entities/actors/cultist/cultist.tscn" id="1_p7b0s"]
+
+[resource]
+script = ExtResource("1_0p6tn")
+scene_file = ExtResource("1_p7b0s")
+apply_rotation_on_map_build = true
+classname = "actor_cultist"
+description = ""
+func_godot_internal = false
+base_classes = Array[Resource]([ExtResource("1_nmps1")])
+class_properties = {
+"speed": 5.0
+}
+class_property_descriptions = {}
+auto_apply_to_matching_node_properties = false
+meta_properties = {
+"size": AABB(-8, -8, 0, 8, 8, 16)
+}
+node_class = ""
+name_property = ""
+metadata/_custom_type_script = "uid://w0asuqk7vkcb"

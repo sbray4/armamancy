@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="FuncGodotFGDPointClass" load_steps=4 format=3 uid="uid://buco8o2xtu5w8"]
+
+[ext_resource type="Script" uid="uid://w0asuqk7vkcb" path="res://addons/func_godot/src/fgd/func_godot_fgd_point_class.gd" id="1_86sr0"]
+[ext_resource type="Resource" uid="uid://be1jdg1pswjg2" path="res://tb/fgd/base/light_base.tres" id="1_a3vdi"]
+[ext_resource type="Script" uid="uid://0bgt0fj0poqm" path="res://entities/lights/light_spot.gd" id="3_auo2w"]
+
+[resource]
+script = ExtResource("1_86sr0")
+script_class = ExtResource("3_auo2w")
+apply_rotation_on_map_build = true
+classname = "light_spot"
+description = ""
+func_godot_internal = false
+base_classes = Array[Resource]([ExtResource("1_a3vdi")])
+class_properties = {
+"angle": 45.0,
+"mangle": Vector3(0, 0, 0),
+"range": 320.0
+}
+class_property_descriptions = {
+"angle": "The spotlight's angle in degrees.",
+"mangle": "Orientation in degrees.",
+"range": "The maximal range that can be reached by the spotlight in Quake Units. The entity script converts this to Godot Units in the LightOmni script."
+}
+auto_apply_to_matching_node_properties = false
+meta_properties = {}
+node_class = "SpotLight3D"
+name_property = ""
+metadata/_custom_type_script = "uid://w0asuqk7vkcb"

@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="WeaponResource" load_steps=5 format=3 uid="uid://f2y73i5fyei1"]
+
+[ext_resource type="Script" uid="uid://c73o5ahogqxg7" path="res://weapon_manager/weapon_resource.gd" id="1_ubggi"]
+[ext_resource type="AudioStream" uid="uid://byp87wbk7wt3" path="res://weapon_manager/revolver/cc0-371041__morganpurkis__single-gunshot-3.wav" id="2_aobwb"]
+[ext_resource type="PackedScene" uid="uid://d2s0pq4lkf5kx" path="res://weapon_manager/revolver/deagle - viewmodel.glb" id="3_h6l2u"]
+[ext_resource type="AudioStream" uid="uid://d3mmrssy4hn2v" path="res://weapon_manager/revolver/cc0-377145__nioczkus__pistol-draw-unholster.wav" id="3_w3hj1"]
+
+[resource]
+script = ExtResource("1_ubggi")
+name = ""
+view_model = ExtResource("3_h6l2u")
+view_model_pos = Vector3(0.2, -0.4, 0.2)
+view_model_rot = Vector3(0, 3.142, 0)
+view_model_scale = Vector3(1, 1, 1)
+view_idle_anim = "Idle"
+view_equip_anim = "Unholster"
+view_shoot_anim = "Shoot"
+shoot_sound = ExtResource("2_aobwb")
+unholster_sound = ExtResource("3_w3hj1")
+damage = 50
+current_ammo = 9999
+max_ammo = 9999
+auto_fire = false
+max_fire_rate_ms = 400.0

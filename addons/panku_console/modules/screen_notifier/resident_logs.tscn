@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://ccr06ddwa73ca"]
 
-[ext_resource type="Script" path="res://addons/panku_console/modules/screen_notifier/resident_logs.gd" id="1_uq2bh"]
+[ext_resource type="Script" uid="uid://qy5utw3p6a4k" path="res://addons/panku_console/modules/screen_notifier/resident_logs.gd" id="1_uq2bh"]
 [ext_resource type="Theme" uid="uid://bk18yfu0d77wk" path="res://addons/panku_console/res/panku_console_theme.tres" id="2_npyp1"]
 
 [node name="ScreenNotifier" type="CanvasLayer" node_paths=PackedStringArray("named_container", "unnamed_container")]
